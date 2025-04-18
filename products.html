@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products - House Products Store</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>House Products Store</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="checkout.html">Checkout</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product-list">
+      <h2>Our Products</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <img src="assets/chair.jpg" alt="Modern Chair">
+          <h3>Modern Chair</h3>
+          <p>$49.99</p>
+          <button onclick="addToCart('Modern Chair', 49.99)">Add to Cart</button>
+          <h2>Checkout</h2>
+<p>Product: Modern Chair</p>
+<p>Price: $49.99</p>
+
+<!-- دکمه واقعی PayPal -->
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_xclick">
+  <input type="hidden" name="business" value="your-paypal-email@example.com">
+  <input type="hidden" name="item_name" value="Modern Chair">
+  <input type="hidden" name="amount" value="49.99">
+  <input type="hidden" name="currency_code" value="USD">
+  <input type="submit" value="Pay with PayPal">
+</form>
+        </div>
+        <div class="product-card">
+          <img src="https://www.bing.com/images/search?view=detailV2&ccid=4zuaaINe&id=D48054E8955595574A45D5D39E4C75F2B2E24B78&thid=OIP.4zuaaINe0SOdaG8RNj8__QHaHa&mediaurl=https%3a%2f%2fstylesatlife.com%2fwp-content%2fuploads%2f2024%2f03%2fFarmhouse-Lamps-for-living-room-1.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.e33b9a68835ed1239d686f11363f3ffd%3frik%3deEvisvJ1TJ7T1Q%26pid%3dImgRaw%26r%3d0&exph=600&expw=600&q=stylish+lamps+for+living+room&simid=607999823507424096&FORM=IRPRST&ck=EEC9DC48E0F1BF26AEB2540A47ECDF76&selectedIndex=0&itb=0&idpp=overlayview&ajaxhist=0&ajaxserp=0" alt="Stylish Lamp">
+          <h3>Stylish Lamp</h3>
+          <p>$29.99</p>
+          <button onclick="addToCart('Stylish Lamp', 29.99)">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="assets/table.jpg" alt="Wooden Table">
+          <h3>Wooden Table</h3>
+          <p>$99.99</p>
+          <button onclick="addToCart('Wooden Table', 99.99)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 House Products Store. All rights reserved.</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
